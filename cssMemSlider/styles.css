@@ -1,0 +1,10 @@
+body{
+    background-image: url(https://kartinkin.com/uploads/posts/2021-07/1626975036_32-kartinkin-com-p-krasnii-poligonalnii-fon-krasivo-33.jpg) ;
+
+}
+.container{
+    margin: 50px auto;
+    max-width: 1000px;
+    background-color: #C4C4C4;
+    min-height: 600px;
+}
