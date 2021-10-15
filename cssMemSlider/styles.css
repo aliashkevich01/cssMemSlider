@@ -7,4 +7,28 @@ body{
     max-width: 1000px;
     background-color: #C4C4C4;
     min-height: 600px;
+    border-radius: 40px;
+}
+.slider{
+    padding: 20px;
+}
+
+.slider-container{
+    min-height: 470px;
+    width: 100%;
+}
+.slider-img{
+    width: 100%;
+    height: auto;   
+}
+
+.slider-text-nav{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input:hover{
+    cursor: pointer;
 }
