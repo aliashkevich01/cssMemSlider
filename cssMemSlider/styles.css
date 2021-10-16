@@ -23,7 +23,7 @@ body{
 }
 .meme-text{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5remс;
+    font-size: 1.5rem;
 }
 .nav{
     padding-top: 20px;
@@ -56,7 +56,7 @@ label{
 .container .slider  label:hover{
     background-color: #FFFFFF;
     border: 1px solid #4281c0;
-    transition-duration: .35s;
+    transition-delay: .15s;
 }
 #slide1:checked~.container .slider label:nth-last-of-type(4),
 #slide2:checked~.container .slider label:nth-last-of-type(3),
@@ -64,6 +64,28 @@ label{
 #slide4:checked~.container .slider label:nth-last-of-type(1){
     background-color: #000000;
     border: 1.5px solid #4281c0;
+}
+@keyframes showImg{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+} 
+@keyframes showText{
+    0%{
+        opacity: 0;
+        margin-bottom: 50px;
+    }
+    100%{
+        opacity:1;
+    }
 }
 /*
 блок с логикой проекта, т.е. блок, отвечающий за показ слайда и текста
@@ -75,6 +97,10 @@ label{
 #slide1:checked ~.container .slider .slider-container  img:nth-of-type(1){
     display: inline-block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
 }
 #slide1:checked ~.container .slider .slider-container img:nth-of-type(2),
 #slide1:checked ~.container .slider .slider-container img:nth-of-type(3),
@@ -84,6 +110,10 @@ label{
 #slide2:checked ~.container .slider .slider-container  img:nth-of-type(2){
     display: inline-block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
 } 
 #slide2:checked ~.container .slider .slider-container img:nth-of-type(1),
 #slide2:checked ~.container .slider .slider-container img:nth-of-type(3),
@@ -93,6 +123,10 @@ label{
 #slide3:checked ~.container .slider .slider-container  img:nth-of-type(3){
     display: inline-block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
 } 
 #slide3:checked ~.container .slider .slider-container img:nth-of-type(1),
 #slide3:checked ~.container .slider .slider-container img:nth-of-type(2),
@@ -102,6 +136,10 @@ label{
 #slide4:checked ~.container .slider .slider-container  img:nth-of-type(4){
     display: inline-block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
 } 
 #slide4:checked ~.container .slider .slider-container  img:nth-of-type(1),
 #slide4:checked ~.container .slider .slider-container  img:nth-of-type(2),
@@ -112,18 +150,35 @@ label{
 
 #slide1:checked ~.container .slider .nav .text p:nth-of-type(1){
     display: block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
 }
 #slide2:checked ~.container .slider .nav .text p:nth-of-type(2){
-    display: inline-block;
+    display: block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
 } 
 #slide3:checked ~.container .slider .nav .text p:nth-of-type(3){
-    display: inline-block;
+    display: block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
 } 
 #slide4:checked ~.container .slider .nav .text p:nth-of-type(4){
-    display: inline-block;
+    display: block;
     position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
 } 
 
  
