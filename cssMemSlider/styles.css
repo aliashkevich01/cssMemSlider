@@ -1,0 +1,215 @@
+body{
+    background-image: url(https://kartinkin.com/uploads/posts/2021-07/1626975036_32-kartinkin-com-p-krasnii-poligonalnii-fon-krasivo-33.jpg) ;
+
+}
+.container{
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: #C4C4C4;
+    min-height: 300px;
+    border-radius: 40px;
+}
+.slider{
+    padding: 20px;
+}
+
+.slider-container{
+    min-height: 470px;
+    width: 100%;
+}
+.slider-img{
+    width: 100%;
+    height: auto;   
+}
+.meme-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+.nav{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-radio{
+    cursor: pointer;
+}
+input{
+   display: none;
+}
+p{
+    display: none;
+}
+/*
+стилизация кнопок
+*/
+label{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: #4281c0;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+}
+.container .slider  label:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #4281c0;
+    transition-delay: .15s;
+}
+#slide1:checked~.container .slider label:nth-last-of-type(4),
+#slide2:checked~.container .slider label:nth-last-of-type(3),
+#slide3:checked~.container .slider label:nth-last-of-type(2),
+#slide4:checked~.container .slider label:nth-last-of-type(1){
+    background-color: #000000;
+    border: 1.5px solid #4281c0;
+}
+@keyframes showImg{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+} 
+@keyframes showText{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+/*
+блок с логикой проекта, т.е. блок, отвечающий за показ слайда и текста
+*/
+.slide-2,.slide-3,.slide-4{
+    display: none;
+}
+
+#slide1:checked ~.container .slider .slider-container  img:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
+}
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(2),
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(3),
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide2:checked ~.container .slider .slider-container  img:nth-of-type(2){
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
+} 
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(1),
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(3),
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide3:checked ~.container .slider .slider-container  img:nth-of-type(3){
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
+} 
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(1),
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(2),
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(4){
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showImg 3s 1;
+    animation-fill-mode: forwards;
+} 
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(1),
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(2),
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(3){
+    display: none;
+}
+
+
+#slide1:checked ~.container .slider .nav .text p:nth-of-type(1){
+    display: block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
+}
+#slide2:checked ~.container .slider .nav .text p:nth-of-type(2){
+    display: block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
+} 
+#slide3:checked ~.container .slider .nav .text p:nth-of-type(3){
+    display: block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
+} 
+#slide4:checked ~.container .slider .nav .text p:nth-of-type(4){
+    display: block;
+    position: relative;
+    opacity: 0;
+    animation-delay: .15s;
+    animation: showText 3s 1;
+    animation-fill-mode: forwards;
+} 
+
+ 
+
+
+
+@media(max-width: 520px){
+    .slider-container{
+        min-height: 300px;
+    }
+    .meme-text{
+        font-size: 1rem;
+    }
+}
+@media(max-width:430px){
+    .container{
+        border-radius:20px;
+    }
+    .slider-container{
+        min-height: 220px;
+    }
+    .nav{
+        flex-direction: column-reverse;
+    }
+    .nav{
+        align-self: center;
+    }
+    .text{
+        align-self: start;
+        margin-top: 20px;
+    }
+    .meme-text{
+        font-size: 0.9rem;
+    }
+}
