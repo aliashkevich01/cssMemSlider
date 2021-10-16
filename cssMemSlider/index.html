@@ -6,31 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mem Slider by A.Aliashkevich</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input type="radio" id="slide1"  name="span" checked >
+    <input type="radio" id="slide2"  name="span">
+    <input type="radio" id="slide3"  name="span">
+    <input type="radio" id="slide4"  name="span">
     <div class="container">
         <div class="slider">
             <div class="slider-container">
-                <div class="slider-image"><img src="slides/3.jpg" alt="first meme" class="slider-img"></div>
-                <div class="slider-image"><img src="slides/3.jpg" alt="first meme" class="slider-img" style="display: none;"></div>
-                <div class="slider-image"><img src="slides/3.jpg" alt="first meme" class="slider-img" style="display: none;"></div>
-                <div class="slider-image"><img src="slides/3.jpg" alt="first meme" class="slider-img" style="display: none;"></div>
+            
+                    <img src="slides/1.jpg" alt="first meme" class="slider-img slide-1">
+
+            
+                    <img src="slides/2.jpg" alt="second meme" class="slider-img slide-2">
+
+                
+                    <img src="slides/3.jpg" alt="third meme" class="slider-img slide-3">
+
+            
+                    <img src="slides/4.jpg" alt="fourth meme" class="slider-img slide-4">
+
             </div>
-            <div class="slider-text-nav">
+            <div class="nav">
                 <div class="text">
-                    <span class="slide-text">
-                        Не меняющийся текст
-                    </span>
+                    <p class="meme-text">
+                        Не осуждайте 
+                    </p>
+                    <p class="meme-text">
+                        Я пишу таск музей фикс вёрстка
+                    </p>
+                    <p class="meme-text">
+                        Нет, Origin deluxe
+                    </p>
+                    <p class="meme-text">
+                        Постер на двери в мою комнату
+                    </p>
                 </div>
                 <nav class="navbar">
-                    <input type="radio" id="slide-1" value="slide-1" class="custom-radio">
-                    <label for="slide-1" class="slide-1 label"></label>
-                    <input type="radio" id="slide-2" value="slide-2" class="custom-radio">
-                    <label for="slide-2" class="slide-2 label"></label>
-                    <input type="radio" id="slide-3" value="slide-3" class="custom-radio">
-                    <label for="slide-3" class="slide-3 label"></label>
-                    <input type="radio" id="slide-4" value="slide-4" class="custom-radio">
-                    <label for="slide-4" class="slide-4 label"></label>
+                    
+                    <label for="slide1" class="slide1"></label>
+                    
+                    <label for="slide2" class="slide2"></label>
+                    
+                    <label for="slide3" class="slide3"></label>
+                    
+                    <label for="slide4" class="slide4"></label>
                 </nav>
             </div>
         </div>

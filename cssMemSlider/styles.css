@@ -21,8 +21,11 @@ body{
     width: 100%;
     height: auto;   
 }
-
-.slider-text-nav{
+.meme-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5remс;
+}
+.nav{
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -32,6 +35,109 @@ body{
 .custom-radio{
     cursor: pointer;
 }
+input{
+   display: none;
+}
+p{
+    display: none;
+}
+/*
+стилизация кнопок
+*/
+label{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: #4281c0;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+}
+.container .slider  label:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #4281c0;
+    transition-duration: .35s;
+}
+#slide1:checked~.container .slider label:nth-last-of-type(4),
+#slide2:checked~.container .slider label:nth-last-of-type(3),
+#slide3:checked~.container .slider label:nth-last-of-type(2),
+#slide4:checked~.container .slider label:nth-last-of-type(1){
+    background-color: #000000;
+    border: 1.5px solid #4281c0;
+}
+/*
+блок с логикой проекта, т.е. блок, отвечающий за показ слайда и текста
+*/
+.slide-2,.slide-3,.slide-4{
+    display: none;
+}
+
+#slide1:checked ~.container .slider .slider-container  img:nth-of-type(1){
+    display: inline-block;
+    position: relative;
+}
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(2),
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(3),
+#slide1:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide2:checked ~.container .slider .slider-container  img:nth-of-type(2){
+    display: inline-block;
+    position: relative;
+} 
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(1),
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(3),
+#slide2:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide3:checked ~.container .slider .slider-container  img:nth-of-type(3){
+    display: inline-block;
+    position: relative;
+} 
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(1),
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(2),
+#slide3:checked ~.container .slider .slider-container img:nth-of-type(4){
+    display: none;
+}
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(4){
+    display: inline-block;
+    position: relative;
+} 
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(1),
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(2),
+#slide4:checked ~.container .slider .slider-container  img:nth-of-type(3){
+    display: none;
+}
+
+
+#slide1:checked ~.container .slider .nav .text p:nth-of-type(1){
+    display: block;
+}
+#slide2:checked ~.container .slider .nav .text p:nth-of-type(2){
+    display: inline-block;
+    position: relative;
+} 
+#slide3:checked ~.container .slider .nav .text p:nth-of-type(3){
+    display: inline-block;
+    position: relative;
+} 
+#slide4:checked ~.container .slider .nav .text p:nth-of-type(4){
+    display: inline-block;
+    position: relative;
+} 
+
+ 
+
+
+
+@media(max-width: 520px){
+    .slider-container{
+        min-height: 300px;
+    }
+    .meme-text{
+        font-size: 1rem;
+    }
+}
 @media(max-width:430px){
     .container{
         border-radius:20px;
@@ -39,7 +145,7 @@ body{
     .slider-container{
         min-height: 220px;
     }
-    .slider-text-nav{
+    .nav{
         flex-direction: column-reverse;
     }
     .nav{
@@ -48,5 +154,8 @@ body{
     .text{
         align-self: start;
         margin-top: 20px;
+    }
+    .meme-text{
+        font-size: 0.9rem;
     }
 }
