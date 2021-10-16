@@ -4,9 +4,9 @@ body{
 }
 .container{
     margin: 50px auto;
-    max-width: 1000px;
+    max-width: 600px;
     background-color: #C4C4C4;
-    min-height: 600px;
+    min-height: 300px;
     border-radius: 40px;
 }
 .slider{
@@ -29,6 +29,24 @@ body{
     align-items: center;
 }
 
-input:hover{
+.custom-radio{
     cursor: pointer;
+}
+@media(max-width:430px){
+    .container{
+        border-radius:20px;
+    }
+    .slider-container{
+        min-height: 220px;
+    }
+    .slider-text-nav{
+        flex-direction: column-reverse;
+    }
+    .nav{
+        align-self: center;
+    }
+    .text{
+        align-self: start;
+        margin-top: 20px;
+    }
 }
